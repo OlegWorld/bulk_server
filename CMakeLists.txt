@@ -3,7 +3,7 @@ project(bulk_server)
 
 find_package(GTest REQUIRED)
 find_package (Threads REQUIRED)
-find_package(Boost 1.58 REQUIRED COMPONENTS system)
+find_package(Boost REQUIRED COMPONENTS system)
 
 add_executable(bulk_server main.cpp async.cpp async.h
         command_reader.cpp command_reader.h
