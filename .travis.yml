@@ -12,6 +12,7 @@ before_script:
 - sudo make
 - sudo cp *.a /usr/lib
 - cd "${TRAVIS_BUILD_DIR}"
+- sudo apt-get install libboost-system-dev -y
 script:
 - cmake .
 - cmake --build .
@@ -21,4 +22,4 @@ deploy:
 - provider: script
   skip_cleanup: true
   script:
-  - curl -T async-0.1.$TRAVIS_BUILD_NUMBER-Linux.deb -uolegworld:$BINTRAY_API_KEY "https://api.bintray.com/content/olegworld/Otus_Homework/async/$TRAVIS_BUILD_NUMBER/async-0.1.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"
+  - curl -T bulk_server-0.1.$TRAVIS_BUILD_NUMBER-Linux.deb -uolegworld:$BINTRAY_API_KEY "https://api.bintray.com/content/olegworld/Otus_Homework/bulk_server/$TRAVIS_BUILD_NUMBER/bulk_server-0.1.$TRAVIS_BUILD_NUMBER-Linux.deb;deb_distribution=trusty;deb_component=main;deb_architecture=amd64;publish=1"

@@ -34,14 +34,14 @@ add_test(test bulk_server_test)
 
 enable_testing()
 
-#install(TARGETS async LIBRARY DESTINATION lib)
-#
-#set(CPACK_GENERATOR DEB)
-#
-#set(CPACK_PACKAGE_VERSION_MAJOR "0")
-#set(CPACK_PACKAGE_VERSION_MINOR "1")
-#set(CPACK_PACKAGE_VERSION_PATCH "$ENV{TRAVIS_BUILD_NUMBER}")
-#
-#set(CPACK_PACKAGE_CONTACT osmironov@gmail.com)
-#
-#include(CPack)
+install(TARGETS bulk_server RUNTIME DESTINATION bin)
+
+set(CPACK_GENERATOR DEB)
+
+set(CPACK_PACKAGE_VERSION_MAJOR "0")
+set(CPACK_PACKAGE_VERSION_MINOR "1")
+set(CPACK_PACKAGE_VERSION_PATCH "$ENV{TRAVIS_BUILD_NUMBER}")
+
+set(CPACK_PACKAGE_CONTACT osmironov@gmail.com)
+
+include(CPack)
